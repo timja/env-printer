@@ -2,7 +2,7 @@ version: '3'
 services:
   web:
     build: .
-    image: hmcts.azurecr.io/timj/env-printer
+    image: hmcts.azurecr.io/timj/env-printer:prod-4d5ce0b
     environment:
       - BLAH="hi"
     ports:
