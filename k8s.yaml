@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - name: env-vars
-          image: hmcts.azurecr.io/timj/env-printer:prod-4d5ce0b
+          image: hmcts.azurecr.io/timj/env-printer:prod-62d8182
           resources:
             requests:
               memory: "64Mi"
