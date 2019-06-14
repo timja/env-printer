@@ -29,13 +29,14 @@ fn hello_world(_: &mut Request) -> IronResult<Response> {
     // for (key, value) in env::vars() {
     //     println!("{}: {}", key, value);
     // }
-    let strings = env::vars()
+    let mut strings = env::vars()
     .map(|(a, b)| format!("{}={}\n", a, b))
                  .filter(|i|!i.starts_with("LESS_TERMCAP"))
-                 .collect::<Vec<_>>()
-                 .concat();
+                 .collect::<Vec<_>>();
+                 
+    strings.sort();
 
-    Ok(Response::with((iron::status::Ok, strings)))
+    Ok(Response::with((iron::status::Ok, strings.concat())))
 }
 
 fn main() {
