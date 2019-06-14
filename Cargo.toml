@@ -1,0 +1,10 @@
+[package]
+name = "env-printer"
+version = "0.1.0"
+authors = ["Tim Jacomb"]
+edition = "2018"
+
+[dependencies]
+time = "0.1.42"
+[dependencies.iron]
+version = "*"
